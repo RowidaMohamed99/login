@@ -36,7 +36,7 @@ function signUp(){
 
 
 function nameValidation(){
-    var regex = /^[A-Z][a-z]{3,}$/;
+    var regex = /^[A-Z][a-z]{2,}(?:\s[A-Za-z]{2,})*$/;
     var nameAlert = document.querySelector(".nameAlert");
     if (regex.test(nameInput.value) == true && nameInput.value !==""){
         nameInput.classList.add("is-valid");
