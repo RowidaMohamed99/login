@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Login</title>
+    <!-- bootstrap -->
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- stylesheet -->
+     <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main>
+        <section class="py-5">
+            <div class="container text-center m-auto p-5 w-75 d-flex  flex-column ">
+                <h1>Smart Login System</h1>
+                <input type="email" 
+                id="email" 
+                placeholder="Enter Your Email"
+                class="form-control my-2 "
+                >
+                <div class="emailAlert d-none">
+                    <p class="text-danger text-center">* Incorrect email</p>
+                </div>
+                <input type="password" 
+                id="password"
+                placeholder="Enter Your Password"
+                class="form-control my-2 "
+                >
+                <div class="passwordAndEmailAlert  d-none">
+                    <p class="text-danger text-center">* Incorrect password or email</p>
+                </div>
+                <p class="m-0 text-center text-danger inputRequired d-none">
+                    All inputs are required
+                </p>
+                <button type="button"
+                id="login"
+                onclick="signIn()"
+                class=" btn btn-outline-info my-3 w-100"
+                >Login</button>
+                <p class="text-white">Don’t have an account? 
+                    <a href="./signup.html" class="text-white" id="Sign">Sign Up</a>
+                </p>
+            </div>
+        </section>
+    </main>
+    
+
+
+
+    <script src="./JS/signin.js"></script>
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+</body>
+</html>

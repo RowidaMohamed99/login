@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Login</title>
+    <!-- bootstrap -->
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- stylesheet -->
+     <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main>
+        <section class="py-5">
+            <div class="container text-center m-auto p-5 w-75 d-flex  flex-column ">
+                <h1>Smart Login System</h1>
+                <!-- name -->
+                <input type="text"
+                id="userName" 
+                
+                placeholder="Enter Your Name"
+                class="form-control my-2">
+                <p class="py-1 text-danger d-flex d-none nameAlert">Name is not valid.</p>
+                <!-- email -->
+                <input type="email" 
+                id="email" 
+                
+                placeholder="Enter Your Email"
+                class="form-control my-2 ">
+                <p class="py-1 text-danger d-flex d-none emailAlert">Email is not valid.</p>
+                
+                <div class="password-container position-relative">
+                    <span class="toggle-password">
+                        <i class="fa-solid fa-eye text-black"></i>
+                    </span>
+                    <div class="existEmail  d-none">
+                    <p class="text-danger">* This email is already exists</p>
+                </div>
+                    <!-- password -->
+                    <input type="password" 
+                    id="password"
+                    
+                    
+                    placeholder="Enter Your Password"
+                    class="form-control my-2 "
+                    >
+                    <p class="py-1 text-danger d-flex d-none passwordAlert">
+                    * ensure your password is at least 8 characters long, includes an
+                    uppercase letter, a lowercase letter, 
+                    a number, and a special characte</p>
+                </div>
+
+                
+                <div class="rquiredInputs  d-flex justify-content-center d-none ">
+                    <p class="text-danger ">* All inputs is required</p>
+                </div>
+                <div class="successMsg  d-flex justify-content-center d-none ">
+                    <p class="text-success text-center">* Success</p>
+                </div>
+                <div class="faildMsg d-flex justify-content-center d-none ">
+                    <p class="text-danger  text-center">* Failed, try again</p>
+                </div>
+
+                <button type="button"
+                id="login"
+                onclick="signUp()"
+                class=" btn btn-outline-info my-3 w-100">Sign Up</button>
+                <p class="text-white">You have an account? 
+                    <a href="./index.html" class="text-white" id="Sign">Signin</a>
+                </p>
+            </div>
+        </section>
+    </main>
+    
+
+
+
+    <script src="./JS/signup.js"></script>
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+</body>
+</html>
